@@ -1,0 +1,15 @@
+.first-section{
+    background-color: $background;
+    height: 385px;
+    @include flexmin();
+    flex-direction: column;
+    padding: 44px;
+    p{
+        width: 70%;
+      
+        margin-bottom: 35px;
+        color:$light-color;
+        font-size: 14px;
+
+    }
+}

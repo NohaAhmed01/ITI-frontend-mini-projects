@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A card</title>
+    <style>
+        #card {
+            width: 300px;
+            height: 500px;
+            border: 4px solid red;
+            border-radius: 25px;
+            margin-top: 40px;
+        }
+
+        .a1 {
+            display: flex;
+            justify-content: left;
+            margin-left: 10px;
+            align-items: flex-end;
+        }
+
+        .a2 {
+            margin-right: 10px;
+            height: 400px;
+            display: flex;
+            justify-content: right;
+            align-items: flex-end;
+        }
+
+        .A {
+            font-family: algerian;
+            font-size: 80px;
+        }
+
+        /**************************************************************************************/
+
+
+        .heart {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -390px;
+            margin-left: 100px;
+        }
+
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: black;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(131deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart:after {
+            left: 0;
+            transform: rotate(226deg);
+            transform-origin: 100% 100%;
+        }
+
+        .trapezoid {
+            position: relative;
+            border-bottom: 75px solid black;
+            border-left: 27px solid transparent;
+            border-right: 27px solid transparent;
+            width: 15px;
+            left: 118px;
+            top: 33px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="card">
+        <div class="a1">
+            <div class="A">A</div>
+        </div>
+        <div class="a2">
+            <div class="A">A</div>
+        </div>
+        <div class="heart"></div>
+        <div class="trapezoid"></div>
+
+
+    </div>
+
+
+</body>
+
+</html>

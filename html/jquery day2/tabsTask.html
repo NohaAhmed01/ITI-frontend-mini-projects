@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.1.js"></script>
+    <style>
+        #tabs {
+            display: flex;
+            width: 440px;
+            justify-content: space-evenly;
+        }
+
+        #tabs div {
+            border: 2px solid;
+            background-color: aqua;
+            padding: 5px;
+            width: 67px;
+            text-align: center;
+        }
+
+        #tabs .active {
+            background-color: blue;
+            color: white;
+        }
+
+        #containers div {
+            width: 558px;
+            border: 1px solid;
+            background-color: antiquewhite;
+            text-align: center;
+            padding: 10px;
+            display: none;
+        }
+        /* [name="tab1"]{
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="tabs">
+        <div class="active" id="tab1">
+            tab1
+        </div>
+        <div  id="tab2">
+            tab2
+        </div>
+        <div  id="tab3">
+            tab3
+        </div>
+        <div  id="tab4">
+            tab4
+        </div>
+        <div  id="tab5">
+            tab5
+        </div>
+
+    </div>
+    <div id="containers">
+        <div name="tab1">
+            <p> div1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident eos sit, eaque et
+                mollitia. Libero dicta autem sapiente nesciunt amet voluptatem velit, illum aliquid impedit architecto
+                dolorum odit minima.</p>
+        </div>
+        <div name="tab2">
+            <p> div2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident eos sit, eaque et
+                mollitia. Libero dicta autem sapiente nesciunt amet voluptatem velit, illum aliquid impedit architecto
+                dolorum odit minima.</p>
+        </div>
+
+        <div name="tab3">
+            <p> div3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident eos sit, eaque et
+                mollitia. Libero dicta autem sapiente nesciunt amet voluptatem velit, illum aliquid impedit architecto
+                dolorum odit minima.</p>
+        </div>
+
+        <div name="tab4">
+            <p> div4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident eos sit, eaque et
+                mollitia. Libero dicta autem sapiente nesciunt amet voluptatem velit, illum aliquid impedit architecto
+                dolorum odit minima.</p>
+        </div>
+        <div name="tab5">
+            <p> div5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam provident eos sit, eaque et
+                mollitia. Libero dicta autem sapiente nesciunt amet voluptatem velit, illum aliquid impedit architecto
+                dolorum odit minima.</p>
+        </div>
+
+
+    </div>
+
+    
+<script>
+   var divName = $(".active").attr("id");
+   $(`[name='${divName}']`).css("display","block");
+
+    $("#tabs div").click(function(){
+        // var newTab = this;
+        var oldTab = $(".active");
+        $(this).addClass("active");
+        oldTab.removeClass("active");
+        var divName = $(".active").attr("id");
+        //  $(`[name='${divName}']`).css("display","block");
+        $(`[name='${divName}']`).show();
+         var oldDivName = oldTab.attr("id");
+        //  $(`[name='${oldDivName}']`).css("display","none");
+        $(`[name='${oldDivName}']`).hide();
+
+
+
+    })
+
+</script>
+</body>
+
+</html>

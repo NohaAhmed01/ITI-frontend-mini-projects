@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #back {
+            background-color: white;
+            display: inline-block;
+            margin-top: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            height: 300px;
+
+
+        }
+
+        #back .input {
+            background-color: white;
+            display: inline-block;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        input {
+            padding: 20px white;
+            border: none;
+            background-color: gainsboro;
+            resize: both;
+            height: 40px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="back">
+        <div class="input">
+            <input type="text">
+            <br>
+            <input type="password">
+            <br>
+            <input type="button" value="LOGIN" style="color: white;background-color: blue; cursor: pointer; "
+                onclick="display()">
+
+        </div>
+        <div id="msg"></div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+        let btn = document.querySelector('input[type=button]')
+
+        let logDiv = document.createElement('div')
+        function display() {
+            
+            let txt = document.querySelector('input[type=text]')
+            let pass = document.querySelector('input[type=password]')
+            if (txt.value == 'admin' && pass.value == 123) {
+                let welcome = document.createElement('p');
+                let wTextnode = document.createTextNode("welcome")
+                welcome.appendChild(wTextnode)
+                logDiv.appendChild(welcome)
+                document.getElementById("msg").innerHTML = "";
+                document.getElementById("msg").appendChild(logDiv)
+
+            } else {
+                let no = document.createElement('p');
+                let nTextnode = document.createTextNode("not registered")
+                no.appendChild(nTextnode)
+                logDiv.appendChild(no)
+                document.getElementById("msg").innerHTML = "";
+                document.getElementById("msg").appendChild(logDiv)
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.1.js"></script>
+
+    <style>
+        *{
+            background-color: burlywood;
+           
+        }
+        button{
+            position: relative;
+            left: 700px;
+            top: 330px;
+            background-color: beige;
+            height: 50px;
+            width: 120px;
+            border-radius: 25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button>Request</button>
+    <aside class="div1" style="float: left; width:700px; height:3507px; background-color: rgba(255, 228, 196, 0.37);"><h1>Title</h1></aside>
+    <aside class="div2" style="float: right; width:700px; height:5403pxpx;  background-color: rgba(255, 228, 196, 0.37);"><h1>Body</h1></aside>
+
+
+    <script>
+        $(".div1").hide();
+        $(".div2").hide();
+
+          $("button").click(function(){
+            $(this).hide();
+            $(".div1").show();
+            $(".div2").show();
+            $.get("https://jsonplaceholder.typicode.com/posts",function(users){
+                    users.forEach(function(el){
+                       $(".div1").append(`<p>${el.title}</p>`);
+                       $(".div2").append(`<p>${el.body}</p>`);
+
+                    });
+
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+1- What is the difference between Em and Rem units?
+*-----------------------------------------------------*
+selectors
+----------
+
+1- select p elements and make them red
+2- select p and div elements 
+3- select p with class mainClass direct child for div with id myDiv and make it styled 
+4- select all p inside div and style them 
+5- select input with type text element with class myClass
+6- select span elements after div 
+7- select p with class myClass 
+8- select div with id myDiv 
+=========================================
+

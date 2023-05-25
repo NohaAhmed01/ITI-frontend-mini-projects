@@ -1,0 +1,77 @@
+.content {
+    display: grid;
+    height: 400px;
+    width: 800px;
+   grid-template-columns: repeat(3 , 1fr) ;
+    grid-template-rows: repeat(6 , 1fr) ;
+    padding: 50px;
+    gap :10px;
+    color: aliceblue;
+
+}
+
+ .i1 {
+    background-color: lightseagreen;
+    grid-row: 6 / 7;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i2 {
+    background-color: lightseagreen;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i3 {
+    
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i4 {
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i5 {
+    background-color: lightseagreen;
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i6 {
+    background-color: lightseagreen;
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i7 {
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i8 {
+    background-color: lightseagreen;
+    grid-row: 1 / -7;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 

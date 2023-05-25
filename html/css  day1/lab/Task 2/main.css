@@ -1,0 +1,21 @@
+p{
+    color: red;
+}
+div p{
+ background-color: aqua;
+}
+div#mydiv p.mainclass{
+   background-color: brown;
+}
+input.myClass{
+    background-color: blueviolet;
+}
+span{
+
+}
+div#container p.myClass{
+
+}
+div#mydiv{
+    
+}

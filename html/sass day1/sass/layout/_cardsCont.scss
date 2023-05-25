@@ -1,0 +1,14 @@
+
+    .cardContainer1 {
+        margin-left: 50px;
+        @include flexmin(space-between);
+    }
+
+    .cardContainer2 {
+        margin-left: 50px;
+
+        @include flexmin(space-between);
+    }
+    .center{
+        @include flexmin(center);
+    }

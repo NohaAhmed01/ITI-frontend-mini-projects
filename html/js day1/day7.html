@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            name;
+            dept;
+            constructor() {
+                this.name = ""
+                this.dept = "general"
+            }
+        }
+        class Manager extends Employee {
+            reports = [];
+            set arr(empArr) {
+                for (let i = 0; i < empArr.length; i++)
+                    this.reports[i] = empArr[i];
+            }
+        }
+        class WorkBee extends Employee {
+            projects = [];
+            set arr(strngArr) {
+                for (let i = 0; i < strngArr.length; i++)
+                    this.projects[i] = strngArr[i];
+            }
+        }
+        class SalesPerson extends WorkBee {
+            quota=100;
+            dept='sales'
+        }
+        class Engineer extends WorkBee{
+            machine =''
+            dept='engineering'
+        }
+
+        const emp = new Employee();
+        emp.name="noha"
+        console.log(emp)
+        
+        const manager = new Manager()
+        manager.arr = [emp, emp, emp]
+        console.log(manager)
+
+        const bee = new WorkBee();
+        bee.arr = ['prjct1', 'prjct2']
+        console.log(bee)
+
+        const sale = new SalesPerson();
+        console.log(sale)
+
+        const eng = new Engineer();
+        console.log(eng)
+
+
+        
+    </script>
+</body>
+
+</html>

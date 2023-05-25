@@ -1,0 +1,12 @@
+$back-color: lightpink;
+@mixin flex($x:space-between ,$y:center) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+    
+}
+
+div{
+    background-color: $back-color;
+    @include flex();
+}

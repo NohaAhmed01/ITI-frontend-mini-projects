@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.1.js"></script>
+    <style>
+        .changecolor{
+            background-color: aqua;
+        }
+        .changeFont{
+            font-family: algerian;
+        }
+        a{
+            text-decoration: none;
+            padding: 5px;
+            text-align: center;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+   <div style=" height:50px;background-color: red;" id="parent">
+   
+   </div>
+  <a>create buttons</a>
+
+        <!-- <h1 class="changeFont">h1</h1>
+        <h1>h1</h1>
+        <button>
+            toggle class
+        </button> -->
+    <!-- <div>div1</div>
+    <div>
+        div2
+    </div>
+    <div>
+       hello
+    </div> -->
+    <!-- <div>
+        <span>hello</span>
+    </div>
+    <div>
+        <span>hello</span>
+    </div>
+     -->
+    <!-- <div id="mydiv" class="className">
+        <p>
+            para
+        </p>
+    </div>
+    <a href="page">click</a>
+    <a href="http://www.google.com">click 2</a> -->
+    <!-- <input type="text">
+    <input type="password">
+    <textarea></textarea> -->
+    <script>
+        $("a").hover(function(){
+            $("a").css({
+                "background-color":"blue",
+                "color":"white"
+            })},
+            function()
+            {
+                $("a").css({
+                "background-color":"aqua",
+                "color":"black"
+                })
+            })
+        $("a").click(function(){
+            $("#parent").append("<button>1</button>");
+            $("#parent").append("<button>2</button>");
+            
+        })
+        $("#parent").on("click","button",function(){
+            alert(this.innerText);
+        })
+        console.log(document.getElementsByTagName("button"));
+        /on event on elemetns created in runtime
+        var btn1  = document.createElement("button");//<button></button>
+        btn1.innerText = "1";
+        var btn2  = document.createElement("button");//<button></button>
+        btn2.innerText = "2";
+        var btns = document.getElementsByTagName("button");
+        btns[0].addEventListener("click",function(){
+            alert(1);
+        })
+        btns[1].addEventListener("click",function(){
+            alert(2);
+        })
+        document.getElementById("parent").appendChild(btn1);
+        document.getElementById("parent").appendChild(btn2);
+        /////////////////////////////////////////////////
+        var btns = document.getElementsByTagName("button");
+        btns[0].addEventListener("click",function(){
+            alert(1);
+        })
+        btns[1].addEventListener("click",function(){
+            alert(2);
+        })
+        ///////on///////////
+        $("button").on("click",newFunc);
+        
+        function newFunc(){
+            console.log("hello");
+            $("button").off("click");
+        }
+        $("button").click(test);
+        function test(){
+            $("h1").toggleClass("changecolor");
+        }
+        modify css//////
+       $("h1").removeClass("changecolor");
+       $("h1").addClass("changecolor");
+        $("h1").attr("class","changecolor");
+        $("h1").css({
+            "background-color":"red",
+            "color":"green",
+            "border":"2px solid blue"
+        })
+       $("h1").css("background-color","red");
+        var h1 = document.getElementsByTagName("h1");
+        console.log(h1);
+        h1[0].style.backgroundColor = "red";
+        h1[1].style.backgroundColor = "red";
+        /wrap element//
+        $("h1").wrap("<div></div")
+        /remove ele//////
+       $("h1").remove();
+        ///////////create ele//////////////
+       var div = $("<div>hello</div>")
+        div.appendTo("body");
+       $("body").append(div);
+       $("body").prepend(div);
+        //////////modify attribute/////////
+    //     $("img").attr({
+    //         "src":"googlelogo_color_272x92dp.png",
+    //         "alt":"my image",
+    //         "class":"red"
+    //     })
+    //    $("img").attr("src","hamada");//set
+    //    alert($("img").attr("src"));//get
+    //     var img = document.getElementsByTagName("img")[0];
+    //    // img.src = "hamada";
+        // img.setAttribute("src","hamada")
+        // ////////////////////////////////////////
+        // $("div").each(function(index,el){
+        //    console.log($(this).text());
+        //   // console.log(index);
+        //    //console.log(el.innerText);
+
+
+        // })
+        /////////////////////////////
+        // var divs = document.getElementsByTagName("div");
+        // console.log(divs);
+        // for(var i=0;i<divs.length;i++){
+        //     console.log(divs[i].innerText);
+        // }
+        //  console.log($("div:even"));
+
+        // console.log($("div:has('span')"));
+        // console.log($("div:contains('hello')"));
+        // console.log($(":input"));
+        // //   console.log($("a[href^='http']"));
+        //   console.log(document.getElementsByTagName("div"));
+    </script>
+</body>
+</html>

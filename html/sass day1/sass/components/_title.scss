@@ -1,0 +1,12 @@
+.title{
+  h2{
+    color:$dark-color;
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  p{
+    color:$light-color;
+  }
+}

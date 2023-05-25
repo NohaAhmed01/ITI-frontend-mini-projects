@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CSS magic</title>
+	<style>
+	.none-bullet-list{
+		list-style-type: none;
+	   }
+	li a{
+		color: red;
+		background-color: pink;
+		text-decoration: none;
+	}
+	a:hover{
+		background-color: red;
+	}
+	#content #aboutus{
+		font-weight: bold;
+		font-size: 12px;
+		color: red !important; 
+	}
+	#aboutus{
+		color: yellow;
+	}
+	#content p::after{
+		content: "read this";
+		color: yellow;
+
+		
+	}
+	#linksbar #loginform{
+		border-style: dashed;
+		border-width: 2px;
+		border-color: rgb(20,70,60);
+
+	}
+	input{
+		background-color: yellow;
+	}
+	input:focus{
+		background-color: white;
+	}
+	.tabled-bordered{
+		padding: 5px;
+		border-style: solid;
+		display: inline;
+		border-width: 5px;
+	}
+	</style>
+	<link rel="stylesheet" href="task1.css">
+</head>
+<body>
+	<div id="header" >
+		<h1 style=" margin: 0 auto;width: 100%; padding-top: 15px;padding-bottom: 15px;background-color: red;">This is the page header</h1>
+	</div>
+	<span id="linksbar" style="width: 25%; height: 100%;display: inline-block;background-color: grey;float: left; ">
+		
+		<div id="loginform"  >
+			User name: <input type="text"/>
+			</br>
+			Password: <input type="password"/>
+			<br/>
+			<input type="checkbox" /> remember me
+			<br/>
+			<button>login</button>
+		</div>
+		<h2 > site menu</h2>
+		<ul class="none-bullet-list">
+			<li><a href="#">link1</a></li>
+			<li><a href="#">link2</a></li>
+			<li><a href="#">link3</a></li>
+			<li><a href="#">link4</a></li>
+			<li><a href="#">link5</a></li>
+		</ul>
+	  
+	</span>
+	
+	<span id="content" style="width: 75%; height: 70%;display:inline-block; float: right;background-color: pink;">
+	 
+		<h2> about us</h2>
+		<p id="aboutus">
+			This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph.
+		</p>
+		
+		<div id="titles">
+			<spans class="tabled-bordered"> title1</spans>
+			<spans class="tabled-bordered"> title2</spans>
+			<spans class="tabled-bordered"> title3</spans>
+		</div>
+     
+	</span>
+ 
+
+
+
+</body>
+</html>

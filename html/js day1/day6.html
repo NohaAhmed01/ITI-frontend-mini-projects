@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .text{
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideItem">
+        <img src="" alt="" id="slideImg">
+        <input type="button" id='play' value="play" onClick="play()">
+        <input type="button" id="stop" value="stop" onClick="stop()">
+
+        <div class="text"></div>
+    </div>
+
+    <script>
+        let img=[];
+        let ply = document.getElementById('play')
+        let stp = document.getElementById('stop')
+
+        let slideimg = document.getElementById('slideImg');
+        let slideTxt = document.getElementsByClassName('text');
+     let interval 
+      let i=0;
+        let http = new XMLHttpRequest();
+        http.open('get','https://jsonplaceholder.typicode.com/albums/1/photos');
+        http.send();
+        
+        http.onreadystatechange = function () {
+            if (http.readyState == 4 && http.status == 200) {
+                img = JSON.parse(http.responseText);
+                  
+                //   let txtcont = document.createTextNode(img[0].title)
+                //   document.getElementsByClassName("text").appendChild(txtcont)
+
+                interval = setInterval(function(){
+                   slideimg.src=img[i].url;
+                  // document.getElementsByClassName('text').innerHTML=img[i].title
+                   slideTxt=img[i].title;
+                    i++
+                    if(i==img.length)
+                    i=0;},1000)
+                }
+              
+               
+           
+                
+            }
+             function play(){
+                   interval= setInterval(function(){
+                   slideimg.src=img[i].url
+                    i++
+                    if(i==img.length)
+                    i=0;
+                },1000)
+                }
+                function stop(){
+                    clearInterval(interval)
+                }
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+    .card {
+    
+   @include flexCardCont();
+    img {
+        width: 50px;
+        height: 60px;
+    }
+    h3{
+        text-transform: capitalize;
+        color: $secondry-color;
+    }
+    p{
+        font-weight: lighter;
+        margin-top: 18px;
+        font-size: 14px;
+
+    }
+    &__text{
+        height: 200px;
+        width:350px;
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+   
+    
+}
+
+
+

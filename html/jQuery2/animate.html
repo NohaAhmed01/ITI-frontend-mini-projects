@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.1.js"></script>
+    <title>Document</title>
+    <style>
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="height:705px; background-color:rgb(220, 206, 206); width: 50px;">
+        <div class="item1" style=" height:50px; background-color:rgb(173, 173, 146); border: 2px solid rgb(241, 236, 236); ">Item 1</div>
+        <div class="div1" style="height: 50px;">hello</div>
+        <div class="item2"
+            style=" height:50px; background-color:rgb(173, 173, 146); border: 2px solid rgb(241, 236, 236);">Item 2</div>
+        <div class="div2" style="height: 50px;">world</div>
+
+    </div>
+
+    <script>
+        $(".item1").hide();
+        $(".item2").hide();
+        $(".div1").hide();
+        $(".div2").hide();
+
+        $("#container").hover(function slideLeft() {
+            $(".item1").show();
+            $(".item2").show();
+            $(this).animate({
+                "width": "200px"
+            }, 500);
+        })
+        $(".item1").click(function () {
+            if ($('.div1').css('display') == 'block') {
+                $('.div1').slideUp(200);
+            }
+            else {
+                $('.div1').slideDown(800);
+            }
+        })
+        $(".item2").click(function () {
+            if ($('.div2').css('display') == 'block') {
+                $('.div2').slideUp(200);
+            }
+            else {
+                $('.div2').slideDown(800);
+            }
+        })
+
+
+
+    </script>
+
+
+</body>
+
+</html>

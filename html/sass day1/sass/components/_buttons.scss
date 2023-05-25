@@ -1,0 +1,32 @@
+.btn{
+    @include flexmin(space-around);
+
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: transparent;
+    &--rectangle{
+        color:$primary-color;
+        padding: 12px;
+        &:hover{
+           @include btnHover($primary-color);
+
+        }
+   
+
+    }
+    
+    &--rounded{
+        border-radius: 26px;
+        border: 2px solid $dark-color;
+        color:$dark-color;
+        padding: 9px 26px;
+        &:hover{
+           
+            @include btnHover($dark-color);
+
+        }
+    }
+}
+

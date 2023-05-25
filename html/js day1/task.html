@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #tick {
+            background-color: bisque;
+            width: 300px;
+            height: 230px;
+            border: solid 3px plum;
+
+        }
+
+        .holder {
+            display: inline-block;
+            display: flex;
+            justify-content: space-between;
+            height: 20px;
+            margin-top: 5px;
+            margin-left: 5px;
+            /* background-color:aquamarine; */
+
+        }
+
+        .green {
+            background-color: darkcyan;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+
+        }
+
+        .red {
+            background-color: crimson;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+        }
+        .on{
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tick">
+        <div class="holder">
+        </div>
+        <br>
+
+    </div>
+    <div>
+        Task<input type="text" id="x">
+        <input type="button" value="ADD" onclick="add()">
+    </div>
+
+    <script>
+        let addDiv = document.createElement('div')
+        let txt = document.querySelector('input[type=text]')
+        let index=0;
+        let arr = []
+        function add() {
+            console.log("skjdlks")
+
+            let task = document.createElement('div');
+            let done = document.createElement('input');
+            let del = document.createElement('input');
+            done.setAttribute('type', 'button')
+            del.setAttribute('type', 'button')
+            done.addEventListener('click',function(){done2(this.parentElement)} );
+            del.addEventListener('click',function(){del2(this.parentElement)} );
+            del.onclick='del()'
+
+            done.className = 'green'
+            del.className = 'red'
+
+
+            let txtbx = document.createTextNode(txt.value)
+
+            task.appendChild(txtbx)
+            addDiv.appendChild(task)
+            addDiv.appendChild(done)
+            addDiv.appendChild(del)
+            document.querySelector('.holder').appendChild(addDiv)
+
+            arr.unshift(addDiv)
+            console.log(arr)
+
+            document.getElementById('x').value = ""
+
+            index++;
+        }
+
+
+        function del2(index) {
+            index.remove()
+
+        }
+        function done2(index) {
+          index.className="on"
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

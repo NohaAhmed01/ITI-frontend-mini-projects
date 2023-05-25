@@ -1,0 +1,97 @@
+/* css code */
+/* *{
+    margin: 0;
+}
+body{
+    font-family: algerian;
+   
+
+}
+h1{
+    color:bisque;
+    background-color: blueviolet;
+    width: 200px;
+    margin: 2px;
+}
+
+p{
+    color:aqua;
+}
+
+.changeColor{
+        color:red;
+        background-color: yellow;
+
+}
+
+#mypara{
+    color:green;
+        width: 200px;
+}
+
+.spans{
+    color:brown;
+    /* font-size: 30px; */
+   
+/* }
+
+.spans,.changeColor{
+    font-size: 60px;
+}
+
+.mydiv p{
+    color:violet
+
+}
+.changeColor:hover{
+   background-color: blue;
+
+}
+[type='password']:focus{
+    background-color: red;
+}
+
+
+[href]{
+    text-decoration: none;
+    color: red;
+}
+
+ul{
+    list-style: none;
+} */ 
+/* css specifecation rules */
+.active a{
+    /* 11 */
+    /* color:blue */
+}
+#mya{
+    /* 100 */
+    /* color: green; */
+}
+
+a{
+    /* 1 */
+    /* color: red !important; */
+}
+.ch{
+    color:blue;
+
+}
+.hamada{
+    /* 10 */
+    color:aqua
+
+}
+
+ul#nav li.active a{
+    /* 113 */
+    /* color:brown; */
+}
+
+/*
+      important  , iniline , id  ,(class,hover,attrubites) , element
+                                                 1               1
+                              1    ,              0         ,     0
+                                 1  ,                1         ,    3
+*/

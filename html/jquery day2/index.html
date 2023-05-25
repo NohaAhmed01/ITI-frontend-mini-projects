@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>div1</span>
+
+    </div>
+    <button onclick="fadeInDiv()">fadeIn</button>
+    <button onclick="fadeOutdiv()">fadeOut</button>
+    <button onclick="fadedivtoggle()">fadetoggle</button>
+    <button onclick="slideUpdiv()">slideUp</button>
+    <button onclick="slideDowndiv()">slide down</button>
+    <button onclick="slidedivtoggle()">slide toggle</button>
+    <button onclick="animateDiv()">animate</button>
+    <button onclick="stopDiv()">stop</button>
+
+    <!-- <input type="text">
+    <button>click</button> -->
+    <script>
+        function fadeInDiv(){
+            $("div").fadeIn(2000);
+        }
+        function fadeOutdiv(){
+            $("div").fadeOut(5000);
+        }
+        function fadedivtoggle(){
+            $("div").fadeToggle();
+        }
+        function slideUpdiv(){
+            $("div").slideUp(1000);
+        }
+        function slideDowndiv(){
+            $("div").slideDown(2000);
+        }
+        function slidedivtoggle(){
+            $("div").slideToggle(1000);
+        }
+        function animateDiv(){
+            $("div").animate({
+                "left":"200px"
+            },2000);
+        }
+        function stopDiv(){
+            $("div").stop();
+        }
+       // document.getElementsByTagName("div")[0].innerHTML += "<h1>hello</h1>"
+    //    var oldHtml =  $("div").html();
+    //    $("div").html(oldHtml+"<h1>hello</h1>");
+    // $("button").click(function(){
+    //     alert($("input").val());
+    // })
+
+    </script>
+</body>
+</html>

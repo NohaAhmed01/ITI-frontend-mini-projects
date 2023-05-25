@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.js"></script>
+</head>
+<body>
+    <div>
+        mydiv
+    </div>
+    <button>ajax call</button>
+    <script>
+        $("button").click(function(){
+            // $.ajax({
+            //     "url":"https://jsonplaceholder.typicode.com/users",
+            //     "method":"get",
+            //     "success":function(employees){
+            //         console.log(employees);
+            //         employees.forEach(function(el){
+            //            $("div").append(`<p>${el.name}</p>`);
+                        
+            //         });
+            //     }
+            // })
+            $.get("https://jsonplaceholder.typicode.com/users",function(users){
+                    users.forEach(function(el){
+                       $("div").append(`<p>${el.name}</p>`);
+                    });
+
+            })
+        })
+
+    </script>
+</body>
+</html>

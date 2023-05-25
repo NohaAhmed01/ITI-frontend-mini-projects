@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2</title>
+    <script src="jquery-3.6.1.js"></script>
+    <style>
+        .gray{
+            background-color: rgb(221, 217, 217);
+        }
+    </style>
+</head>
+<body>
+    <span class="One" style="width: 100px; display: inline-block;">Tab 1</span>
+    <span class="Two" style="width: 100px; display: inline-block;">Tab 2</span>
+    <span class="Three" style="width: 80%; display: inline-block;">Tab 3</span>
+    <span id="newDiv"></span>   
+    
+
+
+    <script>
+        $(".One").on("click",function(){
+            $("#newDiv div").remove();
+
+            $("#newDiv").append("<div>tab 1</div>")
+            $('div').addClass('gray');
+            $(".One").addClass("gray");
+            $(".Two").removeClass("gray");
+            $(".Three").removeClass("gray");
+
+            
+        })
+        $(".Two").on("click",function(){
+            $("#newDiv div").remove();
+
+            $("#newDiv").append("<div>tab 2</div>")
+            $('div').addClass('gray');
+            $(".Two").addClass("gray");
+            $(".One").removeClass("gray");
+            $(".Three").removeClass("gray");
+            
+        })
+        $(".Three").on("click",function(){
+            $("#newDiv div").remove();
+
+            $("#newDiv").append("<div>tab 3</div>")
+            $('div').addClass('gray');
+            $(".Three").addClass("gray");
+            $(".One").removeClass("gray");
+            $(".Two").removeClass("gray");
+        })
+        
+    </script>
+</body>
+</html>

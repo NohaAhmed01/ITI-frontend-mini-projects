@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div { */
+        /* width: 200px;
+            height: 200px;
+            background: linear-gradient(blue, yellow); */
+        /* Firefox 3.6+ */
+        /* background: -moz-linear-gradient(100% 100% 90deg, FFFF00, #0000FF); */
+        /* Safari 4-5, Chrome 1-9 */
+        /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0000FF), to(#FFFF00)); */
+        /* Safari 5.1+, Chrome 10+ */
+        /* background: -webkit-linear-gradient(#FFFF00, #0000FF); */
+        /* Opera 11.10+ */
+        /* background: -o-linear-gradient(#FFFF00, #0000FF); */
+
+        /* } */
+        @font-face {
+            font-family: hamada;
+            src: url("borneo--.ttf");
+        }
+
+        a[href^='http'] {
+            text-decoration: none;
+            padding: 3px;
+            background-color: blue;
+            color: aliceblue;
+
+        }
+
+        a[href$='html'] {
+            text-decoration: none;
+            padding: 2px;
+            background-color: aquamarine;
+            color: tomato;
+        }
+
+        .mypara:last-child {
+            background-color: aqua;
+        }
+
+        .mypara {
+            font-size: 30px;
+            color: brown;
+        }
+
+        table {
+
+            width: 200px;
+            font-family: hamada;
+
+        }
+
+        table,
+        td {
+            border: 2px solid;
+        }
+
+        tr:nth-child(even) {
+            background-color: aquamarine;
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(216, 210, 210);
+        }
+
+        td:empty {
+            background-color: red;
+        }
+
+        /* #mydiv {
+            font-size: 60px;
+            text-shadow: 5px 3px 6px red; 
+            position: absolute;
+            left: 70px;
+             background-color: rgba(0,0,255,0.7) 
+            background-color: blue;
+            opacity: 0.3;
+        } */
+
+        #text {
+            width: 150px;
+            /* height: 100px; */
+            background-color: rgba(126, 121, 121, 0.5);
+
+
+        }
+
+        #mydiv {
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            /* background-image: url("download.jfif");
+            background-repeat:no-repeat ;
+            background-size: cover; */
+            /* border-radius: 0px 0px 0px 0px; */
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 0px 8px red;
+            border: 10px solid aqua;
+            box-sizing: border-box;
+        }
+
+        #mydiv:hover {
+
+            border: 10px solid red;
+            background-color: red;
+        }
+
+        #child {
+            width: 290px;
+            height: 290px;
+            background-color: blue;
+            border-radius: 50%;
+
+        }
+
+        div {
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            margin: 60px;
+            /* transform: skew(30deg) ; */
+            /* transform: scale(1.5) ; */
+            /* transform: rotate(60deg); */
+            /* transition-duration:2s ;
+            transition-property: all;
+            transition-timing-function: ease-in-out; */
+            animation-name: myAnimation;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+              animation-iteration-count: infinite; 
+
+        }
+
+        div:hover {
+            /* background-color: blue;
+            transform: translate(30px,60px); */
+
+
+        }
+
+        @keyframes myAnimation {
+            0% {
+                background-color: blueviolet;
+                transform: rotate(60deg);
+            }
+
+            50% {
+                background-color: blue;
+                transform: rotate(90deg);
+            }
+
+            70% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                border: 6px solid yellow;
+            }
+
+            /* from{
+                background-color: red;
+                transform: rotate(60deg);
+                margin-top: 90px;
+
+            }
+            to{
+                background-color: black;
+                border: 3px solid green;
+                transform: scale(1.5) ;
+
+
+            } */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+
+    </div>
+    <!-- <div id="mydiv">
+
+       <div id="child">
+
+        </div> 
+    </div>-->
+
+    <!-- <div id="mydiv">
+        text
+    </div>
+    <div>
+      
+    </div> -->
+    <!-- <table>
+        <tbody>
+            <tr>
+                <td>
+                    menna
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    menna
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    menna
+                </td>
+                <td>
+                    2000
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    menna
+                </td>
+                <td>
+                    2000
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    menna
+                </td>
+                <td>
+                    2000
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    menna
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table> -->
+    <!-- <div>
+        <p class="mypara"> para 1</p>
+        <p class="mypara"> para 2</p>
+        <p class="mypara"> para 3</p>
+        <p class="mypara"> para 4</p>
+        
+
+    </div>
+    <div>
+        <p class="mypara"> para 1</p>
+        <p class="mypara"> para 2</p>
+        <p class="mypara"> para 3</p>
+        
+
+    </div>
+    <div>
+        <p class="mypara"> para 1</p>
+        <p class="mypara"> para 2</p>
+      
+        
+
+    </div>
+    <p>
+        my para
+    </p> -->
+    <!-- <div>
+
+
+    </div> -->
+    <!-- <a href="http://www.google.com">google</a>
+    <br>
+    <a href="http://www.iti.gov.eg">iti</a>
+    <br>
+    <a href="page2.html">page 2</a>
+    <br>
+    <a href="aboutus.html">about us</a> -->
+</body>
+
+</html>

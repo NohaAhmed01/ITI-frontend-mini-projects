@@ -1,0 +1,107 @@
+* {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Open Sans, sans-serif;
+}
+
+body {
+  background-color: rgb(243, 239, 239);
+}
+
+.first-section {
+  background-color: white;
+  height: 385px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 44px;
+}
+.first-section p {
+  width: 70%;
+  margin-bottom: 35px;
+  color: #777;
+  font-size: 14px;
+}
+
+.cardContainer1 {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardContainer2 {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: transparent;
+}
+.btn--rectangle {
+  color: #2d529f;
+  padding: 12px;
+}
+.btn--rectangle:hover {
+  background-color: #2d529f;
+  color: white;
+}
+.btn--rounded {
+  border-radius: 26px;
+  border: 2px solid rgb(36, 36, 36);
+  color: rgb(36, 36, 36);
+  padding: 9px 26px;
+}
+.btn--rounded:hover {
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
+
+.title h2 {
+  color: rgb(36, 36, 36);
+  text-transform: capitalize;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.title p {
+  color: #777;
+}
+
+.card {
+  display: flex;
+  justify-content: left;
+}
+.card img {
+  width: 50px;
+  height: 60px;
+}
+.card h3 {
+  text-transform: capitalize;
+  color: #008fe2;
+}
+.card p {
+  font-weight: lighter;
+  margin-top: 18px;
+  font-size: 14px;
+}
+.card__text {
+  height: 200px;
+  width: 350px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+/*# sourceMappingURL=main.css.map */

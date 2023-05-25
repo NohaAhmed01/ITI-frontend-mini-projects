@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <script>
+
+ //first task
+
+
+        // let prmpt = prompt("do you want to add or search a contact? ");
+
+        // let contacts
+        // if (prmpt == "add") {
+        //     contacts = [{ name: prompt('enter contact name: '), num: prompt('enter contact number: ') }]
+        //     let ask = confirm('do you want to add another contact?')
+
+        //     while (ask) {
+        //         contacts.unshift({ name: prompt('enter contact name: '), num: prompt('enter contact number: ') })
+        //         let again = confirm('add another contact?')
+        //         if (again) ask = true
+        //         else ask = false;
+        //     } console.log(contacts)
+        //     let s = confirm('do you want to search for a contact?')
+        //     if (s) {
+        //         let x = prompt('type the contact name you want to search for')
+        //         let n = contacts.find(txt => txt.name == x)
+        //         console.log(n)
+
+        //     }
+
+        // } else {
+        //     console.log('there is no contacts yet')
+
+        // }
+
+
+
+
+//second task
+
+            let x = prompt("enter numbers separated by , to add to first array")
+            let newX = x.split(",")
+           console.log(newX) 
+            let y = prompt("enter numbers separated by , to add to second array")
+            let newY = y.split(",")
+           console.log(newY)
+           let xy = newX.concat(newY)
+           
+           for(let i = 0;i<=xy.length;i++){ 
+            if(newX[i]==newY[i])
+            xy.splice(i,1)
+           }console.log(xy)
+       
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
